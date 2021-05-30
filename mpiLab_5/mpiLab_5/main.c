@@ -263,6 +263,11 @@ int main(int argc, char *argv[]) {
             }
         }
     }
+	
+	// group and communicator invalidation
+	MPI_Group_free(&MPI_GROUP_KARATSUBA);
+	MPI_Comm_free(&MPI_COMM_KARATSUBA);
+	
     MPI_Finalize();
     
     return 0;
